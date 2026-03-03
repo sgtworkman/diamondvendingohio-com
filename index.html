@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diamond Vending Ohio – Free Vending Machines Cleveland OH</title>
+  <meta name="description" content="Free vending machine installation and service for Cleveland Ohio businesses. Snacks, beverages, ATMs, and mini claw machines. Zero cost to your location. Call 440-503-1822.">
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
+  <link rel="apple-touch-icon" href="img/favicon-192.png">
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Diamond Vending Ohio",
+    "description": "Free vending machine services, ATM placement, and mini claw machine installation for businesses in Cleveland and Northeast Ohio.",
+    "telephone": "440-503-1822",
+    "email": "diamondvendingohio@gmail.com",
+    "url": "https://diamondvendingohio.com",
+    "logo": "https://diamondvendingohio.com/img/logo.png",
+    "areaServed": {
+      "@type": "State",
+      "name": "Ohio"
+    },
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 41.4993, "longitude": -81.6944 },
+      "geoRadius": "50000"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "16:00" }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue: #2366f5;
+      --blue-dark: #1a4fc2;
+      --dark: #1a202c;
+      --gray: #4a5568;
+      --light: #f7fafc;
+      --white: #ffffff;
+      --green: #16a34a;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: var(--dark); line-height: 1.6; }
+    a { color: var(--blue); text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* NAV */
+    nav {
+      background: var(--dark);
+      padding: 0 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 70px; position: sticky; top: 0; z-index: 100;
+    }
+    .nav-brand { display: flex; align-items: center; gap: 0.75rem; color: var(--white); font-weight: 700; font-size: 1.05rem; }
+    .nav-brand img { width: 38px; height: 38px; border-radius: 6px; }
+    .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+    .nav-links a { color: rgba(255,255,255,0.8); font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta {
+      background: var(--blue); color: var(--white) !important;
+      padding: 0.5rem 1.2rem; border-radius: 6px; font-weight: 700 !important;
+    }
+    .nav-cta:hover { background: var(--blue-dark); opacity: 1 !important; }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, rgba(26,32,44,0.88) 0%, rgba(35,102,245,0.85) 100%),
+                  url('img/hero-bg.jpg') center/cover no-repeat;
+      color: var(--white); text-align: center; padding: 5.5rem 1.5rem;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 20px; padding: 0.35rem 1rem; font-size: 0.85rem;
+      font-weight: 600; margin-bottom: 1.25rem; letter-spacing: 0.5px;
+    }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 800; line-height: 1.15; margin-bottom: 1rem; }
+    .hero h1 span { color: #7dd3fc; }
+    .hero p { font-size: 1.15rem; opacity: 0.9; max-width: 580px; margin: 0 auto 0.75rem; }
+    .hero-sub { font-size: 0.95rem !important; opacity: 0.7 !important; margin-bottom: 2rem !important; }
+    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .btn { display: inline-block; padding: 0.9rem 2rem; border-radius: 8px; font-weight: 700; font-size: 1rem; transition: all 0.2s; cursor: pointer; }
+    .btn-primary { background: var(--white); color: var(--blue); }
+    .btn-primary:hover { background: var(--light); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+    .btn-outline { border: 2px solid rgba(255,255,255,0.6); color: var(--white); }
+    .btn-outline:hover { background: rgba(255,255,255,0.1); }
+    .hero-stats { display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap; }
+    .hero-stat { text-align: center; }
+    .hero-stat strong { display: block; font-size: 1.6rem; font-weight: 800; }
+    .hero-stat span { font-size: 0.8rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* TRUST BAR */
+    .trust-bar {
+      background: var(--blue); color: var(--white);
+      display: flex; justify-content: center; flex-wrap: wrap; gap: 0 2.5rem;
+      padding: 0.75rem 1.5rem; font-size: 0.875rem; font-weight: 600;
+    }
+    .trust-bar span { display: flex; align-items: center; gap: 0.4rem; padding: 0.25rem 0; }
+
+    /* SECTIONS */
+    section { padding: 4rem 1.5rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--blue); font-weight: 700; margin-bottom: 0.5rem; }
+    h2 { font-size: clamp(1.65rem, 3vw, 2.25rem); font-weight: 800; color: var(--dark); margin-bottom: 1rem; }
+    .section-intro { font-size: 1.05rem; color: var(--gray); max-width: 600px; }
+
+    /* HOW IT WORKS */
+    .how-bg { background: var(--light); }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 3rem; }
+    .step { text-align: center; }
+    .step-num {
+      width: 60px; height: 60px; border-radius: 50%;
+      background: var(--blue); color: var(--white);
+      font-size: 1.5rem; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1rem;
+    }
+    .step h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .step p { color: var(--gray); font-size: 0.95rem; }
+
+    /* SERVICES GRID */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-top: 3rem; }
+    .service-card {
+      background: var(--white); border-radius: 12px; padding: 1.75rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07); border-top: 4px solid var(--blue);
+    }
+    .service-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .service-card p { color: var(--gray); font-size: 0.92rem; line-height: 1.6; }
+    .service-icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
+    .badge-unique {
+      display: inline-block; background: #fef3c7; color: #92400e;
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.5px; padding: 0.15rem 0.6rem; border-radius: 20px; margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+    .brand-pills { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.75rem; }
+    .pill { background: var(--light); border: 1px solid #e2e8f0; border-radius: 20px; padding: 0.2rem 0.7rem; font-size: 0.78rem; color: var(--gray); }
+
+    /* WHY US */
+    .why-bg { background: var(--dark); color: var(--white); }
+    .why-bg h2, .why-bg .section-label { color: var(--white); }
+    .why-bg .section-label { color: #7dd3fc; }
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+    .why-card { border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 1.5rem; }
+    .why-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--white); }
+    .why-card p { font-size: 0.9rem; color: rgba(255,255,255,0.65); line-height: 1.6; }
+    .why-icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
+
+    /* PHOTOS */
+    .photos { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 3rem; }
+    .photos img { border-radius: 10px; width: 100%; height: 240px; object-fit: cover; }
+
+    /* TESTIMONIALS */
+    .testimonials-bg { background: var(--light); }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+    .testimonial-card { background: var(--white); border-radius: 12px; padding: 1.75rem; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+    .stars { color: #f59e0b; font-size: 1.1rem; margin-bottom: 0.75rem; }
+    .testimonial-card blockquote { font-size: 0.95rem; color: var(--gray); font-style: italic; margin-bottom: 1rem; line-height: 1.7; }
+    .testimonial-author { font-weight: 700; font-size: 0.875rem; }
+    .testimonial-biz { font-size: 0.8rem; color: var(--gray); }
+
+    /* SERVICE AREA */
+    .area-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+    .area-tag {
+      background: var(--white); border: 1px solid #e2e8f0;
+      border-radius: 20px; padding: 0.3rem 0.9rem;
+      font-size: 0.85rem; color: var(--gray); font-weight: 500;
+    }
+
+    /* FAQ */
+    .faq-list { margin-top: 2.5rem; max-width: 760px; }
+    details { border-bottom: 1px solid #e2e8f0; padding: 1.1rem 0; }
+    summary {
+      font-weight: 700; font-size: 1rem; cursor: pointer; list-style: none;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    summary::after { content: '+'; font-size: 1.3rem; color: var(--blue); flex-shrink: 0; }
+    details[open] summary::after { content: '−'; }
+    details p { margin-top: 0.75rem; color: var(--gray); font-size: 0.95rem; line-height: 1.7; padding-right: 1rem; }
+
+    /* ADDITIONAL SERVICES */
+    .other-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.85rem; margin-top: 2rem; }
+    .other-list li {
+      display: flex; align-items: center; gap: 0.75rem;
+      background: var(--white); border: 1px solid #e2e8f0;
+      border-radius: 8px; padding: 1rem 1.25rem; font-weight: 500;
+    }
+    .other-list li::before { content: '✓'; color: var(--blue); font-weight: 800; }
+
+    /* CTA */
+    .cta-section {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+      color: var(--white); text-align: center; padding: 5rem 1.5rem;
+    }
+    .cta-section h2 { color: var(--white); margin-bottom: 1rem; }
+    .cta-section p { opacity: 0.9; font-size: 1.1rem; max-width: 520px; margin: 0 auto 2rem; }
+    .cta-contact { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+    .cta-contact a { color: var(--white); font-weight: 600; font-size: 1.05rem; }
+    .cta-contact a:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    footer { background: var(--dark); color: rgba(255,255,255,0.55); text-align: center; padding: 2rem 1.5rem; font-size: 0.875rem; }
+    footer a { color: rgba(255,255,255,0.65); }
+
+    /* MOBILE */
+    @media (max-width: 640px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+      .hero-stats { gap: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-brand">
+    <img src="img/logo.png" alt="Diamond Vending Ohio">
+    Diamond Vending Ohio
+  </a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#why-us">Why Us</a>
+    <a href="#faq">FAQ</a>
+    <a href="contact.html" class="nav-cta">Get FREE Machine</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">🏆 Serving Northeast Ohio</div>
+    <h1>Free Vending Machines<br>for Your <span>Cleveland Business</span></h1>
+    <p>We install, stock, and maintain everything — at absolutely zero cost to you.</p>
+    <p class="hero-sub">Snacks · Beverages · ATMs · Mini Claw Machines</p>
+    <div class="hero-btns">
+      <a href="contact.html" class="btn btn-primary">🎁 Get Your FREE Machine</a>
+      <a href="tel:4405031822" class="btn btn-outline">📞 440-503-1822</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>$0</strong><span>Cost to You</span></div>
+      <div class="hero-stat"><strong>48hr</strong><span>Installation</span></div>
+      <div class="hero-stat"><strong>3</strong><span>Unique Services</span></div>
+      <div class="hero-stat"><strong>NE Ohio</strong><span>Service Area</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <span>✅ Free Installation</span>
+  <span>✅ Free Restocking</span>
+  <span>✅ Free Maintenance</span>
+  <span>✅ Local & Family Owned</span>
+  <span>✅ Top Brand Products</span>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="how-bg">
+  <div class="container">
+    <p class="section-label">Simple Process</p>
+    <h2>Get Your Free Machine in 3 Steps</h2>
+    <p class="section-intro">We make it completely effortless. You don't pay a dime — ever.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Request Your Machine</h3>
+        <p>Fill out our quick form or call us. Tell us your location and what you're looking for.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>We Install — Free</h3>
+        <p>We deliver and install your machine within 48 hours at zero cost to your business.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>We Handle Everything</h3>
+        <p>We restock, repair, and maintain everything. You just enjoy happy employees and customers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <p class="section-label">What We Offer</p>
+    <h2>Services Built Around Your Business</h2>
+    <p class="section-intro">From snacks to ATMs — we offer services no other Cleveland vending company does.</p>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">🥤</div>
+        <h3>Beverages</h3>
+        <p>Cold drinks your team actually wants, stocked and refreshed on a regular schedule.</p>
+        <div class="brand-pills">
+          <span class="pill">Pepsi</span><span class="pill">Coke</span><span class="pill">7up</span>
+          <span class="pill">Monster</span><span class="pill">Red Bull</span><span class="pill">Starbucks</span>
+          <span class="pill">Celsius</span><span class="pill">C4</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🍫</div>
+        <h3>Snacks</h3>
+        <p>Name-brand snacks that keep your staff and customers satisfied all day long.</p>
+        <div class="brand-pills">
+          <span class="pill">Frito-Lay</span><span class="pill">Herr's</span><span class="pill">Snyder's</span>
+          <span class="pill">Hershey's</span><span class="pill">Mars</span><span class="pill">Little Debbie</span>
+          <span class="pill">Duchess Donuts</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🏧</div>
+        <h3>ATM Placement <span class="badge-unique">Unique</span></h3>
+        <p>Generate passive revenue for your business with a free ATM installation. We manage everything — cash, maintenance, and service calls.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🎮</div>
+        <h3>Mini Claw Machines <span class="badge-unique">Unique</span></h3>
+        <p>The only vending provider in Cleveland offering mini claw machines. Drive foot traffic and create an experience customers remember.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-bg" id="why-us">
+  <div class="container">
+    <p class="section-label">Why Diamond Vending</p>
+    <h2>We Do Things Other Vending Companies Don't</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">💰</div>
+        <h3>Zero Cost. Period.</h3>
+        <p>No contracts, no fees, no upfront costs. We provide the machine, stock it, and fix it — you pay nothing.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🏧</div>
+        <h3>ATMs = Passive Revenue</h3>
+        <p>Unlike competitors, we offer ATM placement — your location earns a cut of every transaction.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🎮</div>
+        <h3>Only Claw Machines in CLE</h3>
+        <p>No other local vending company offers mini claw machines. Stand out and give customers something fun.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">⚡</div>
+        <h3>Fast & Local</h3>
+        <p>We're based right here in Northeast Ohio. 48-hour installation, fast response when something needs attention.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🛒</div>
+        <h3>We Buy Your Old Machines</h3>
+        <p>Have a vending machine collecting dust? We'll buy it or remove it for you — free of charge.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🎯</div>
+        <h3>Your Products, Your Choice</h3>
+        <p>Tell us what your customers want and we'll stock it. No locked-in product lists, no rigid contracts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTOS -->
+<section>
+  <div class="container">
+    <p class="section-label">Our Equipment</p>
+    <h2>Modern, Clean, Professional</h2>
+    <p class="section-intro">Well-maintained machines that look great in any setting — office, gym, hotel, or retail.</p>
+    <div class="photos">
+      <img src="img/vending2.jpg" alt="Diamond Vending Ohio vending machine" loading="lazy">
+      <img src="img/atm.jpg" alt="ATM machine placement service" loading="lazy">
+      <img src="img/claw.jpg" alt="Mini claw machine placement" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-bg">
+  <div class="container">
+    <p class="section-label">What Customers Say</p>
+    <h2>Businesses Love Diamond Vending</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"The whole process was incredibly easy. They set everything up within a couple days, and our employees love having fresh drinks and snacks available. Couldn't recommend them more."</blockquote>
+        <div class="testimonial-author">Mike T.</div>
+        <div class="testimonial-biz">Auto Shop, Parma OH</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"We got both a snack machine and an ATM installed. Zero hassle, zero cost, and now we're actually making a little extra from the ATM fees. Best decision we've made."</blockquote>
+        <div class="testimonial-author">Sandra K.</div>
+        <div class="testimonial-biz">Retail Store, Strongsville OH</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"The claw machine has been a huge hit with our waiting customers. Kids love it, parents appreciate it, and it keeps people in our shop longer. Diamond Vending was great to work with."</blockquote>
+        <div class="testimonial-author">James R.</div>
+        <div class="testimonial-biz">Auto Dealership, Medina OH</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section>
+  <div class="container">
+    <p class="section-label">Where We Serve</p>
+    <h2>Proudly Serving Northeast Ohio</h2>
+    <p class="section-intro">We provide free vending services throughout Greater Cleveland and surrounding communities.</p>
+    <div class="area-grid">
+      <span class="area-tag">Cleveland</span>
+      <span class="area-tag">Parma</span>
+      <span class="area-tag">Strongsville</span>
+      <span class="area-tag">Medina</span>
+      <span class="area-tag">Brunswick</span>
+      <span class="area-tag">Mentor</span>
+      <span class="area-tag">Euclid</span>
+      <span class="area-tag">Lakewood</span>
+      <span class="area-tag">North Olmsted</span>
+      <span class="area-tag">Westlake</span>
+      <span class="area-tag">Avon</span>
+      <span class="area-tag">Elyria</span>
+      <span class="area-tag">Lorain</span>
+      <span class="area-tag">Solon</span>
+      <span class="area-tag">Beachwood</span>
+      <span class="area-tag">Shaker Heights</span>
+      <span class="area-tag">Garfield Heights</span>
+      <span class="area-tag">Maple Heights</span>
+      <span class="area-tag">Bedford</span>
+      <span class="area-tag">Twinsburg</span>
+      <span class="area-tag">Hudson</span>
+      <span class="area-tag">Akron</span>
+      <span class="area-tag">Berea</span>
+      <span class="area-tag">Brook Park</span>
+    </div>
+  </div>
+</section>
+
+<!-- ADDITIONAL SERVICES -->
+<section style="background:var(--light); padding: 3rem 1.5rem;">
+  <div class="container">
+    <p class="section-label">Also Available</p>
+    <h2>More Ways We Can Help</h2>
+    <ul class="other-list">
+      <li>We buy used vending machines</li>
+      <li>Vending machine removal &amp; installation</li>
+      <li>Mini claw machine placement</li>
+      <li>ATM placement &amp; revenue sharing</li>
+    </ul>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <p class="section-label">FAQ</p>
+    <h2>Common Questions</h2>
+    <div class="faq-list">
+      <details open>
+        <summary>Is there really zero cost to my business?</summary>
+        <p>Yes — completely free. We provide the machine, deliver it, install it, keep it stocked, and handle any repairs. You never pay a penny. We make money from the product sales, and you get a great amenity for your location at no cost.</p>
+      </details>
+      <details>
+        <summary>How long does installation take?</summary>
+        <p>Most installations are completed within 24–48 hours of your request. We'll coordinate a convenient time for your business and handle everything from delivery to setup.</p>
+      </details>
+      <details>
+        <summary>What if the machine breaks or needs service?</summary>
+        <p>Just call or text us. We respond fast and handle all repairs at no cost to you. Our goal is to make sure the machine is always working and fully stocked.</p>
+      </details>
+      <details>
+        <summary>Can I choose what products go in my machine?</summary>
+        <p>Absolutely. We work with you to stock products your employees and customers actually want. We're flexible — if something isn't selling, we swap it out for something better.</p>
+      </details>
+      <details>
+        <summary>Do you offer ATMs for small businesses?</summary>
+        <p>Yes — and you can earn a share of ATM transaction fees, turning your location into a passive revenue source. We handle the machine, cash management, and all maintenance.</p>
+      </details>
+      <details>
+        <summary>What's the minimum size location you work with?</summary>
+        <p>We work with businesses of all sizes — from small offices and waiting rooms to large warehouses and retail stores. If you have foot traffic, we can find a solution that works.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready for Your Free Vending Machine?</h2>
+    <p>No cost. No contracts. No hassle. We do everything — you just enjoy the benefits.</p>
+    <a href="contact.html" class="btn btn-primary" style="font-size:1.1rem;padding:1rem 2.5rem;">🎁 Request Your Free Machine →</a>
+    <div class="cta-contact">
+      <a href="tel:4405031822">📞 440-503-1822</a>
+      <a href="mailto:diamondvendingohio@gmail.com">✉️ diamondvendingohio@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2024 Diamond Vending Ohio &nbsp;·&nbsp; Cleveland, Ohio &nbsp;·&nbsp; <a href="tel:4405031822">440-503-1822</a> &nbsp;·&nbsp; <a href="contact.html">Contact Us</a></p>
+</footer>
+
+</body>
+</html>

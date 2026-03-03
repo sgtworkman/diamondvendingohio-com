@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="diamondGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4f8ef7;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2366f5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a4fc2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="shimmer" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.35" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#1a4fc2" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="190" fill="#1a202c"/>
+
+  <!-- Diamond gem shape -->
+  <!-- Top crown facets -->
+  <polygon points="200,70 145,150 200,130" fill="url(#diamondGrad)" filter="url(#shadow)"/>
+  <polygon points="200,70 200,130 255,150" fill="#1a4fc2"/>
+  <polygon points="200,70 115,130 145,150" fill="#3d75f5"/>
+  <polygon points="200,70 255,150 285,130" fill="#1e5ae8"/>
+
+  <!-- Crown top bar -->
+  <polygon points="115,130 145,150 200,130 255,150 285,130 260,100 200,90 140,100" fill="url(#diamondGrad)"/>
+
+  <!-- Main pavilion (lower diamond body) -->
+  <polygon points="145,150 115,130 200,320" fill="#1e5ae8"/>
+  <polygon points="145,150 200,320 200,200" fill="#2366f5"/>
+  <polygon points="200,200 200,320 255,150" fill="#1a4fc2"/>
+  <polygon points="255,150 285,130 200,320" fill="#163faa"/>
+
+  <!-- Center facet highlight -->
+  <polygon points="145,150 200,200 255,150 200,130" fill="url(#diamondGrad)"/>
+  <polygon points="145,150 200,200 255,150 200,130" fill="url(#shimmer)"/>
+
+  <!-- Sparkle top right -->
+  <g transform="translate(305,85)">
+    <line x1="0" y1="-12" x2="0" y2="12" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+    <line x1="-12" y1="0" x2="12" y2="0" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+    <line x1="-7" y1="-7" x2="7" y2="7" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <line x1="7" y1="-7" x2="-7" y2="7" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  </g>
+
+  <!-- Sparkle small top left -->
+  <g transform="translate(88,105)">
+    <line x1="0" y1="-7" x2="0" y2="7" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+    <line x1="-7" y1="0" x2="7" y2="0" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  </g>
+</svg>

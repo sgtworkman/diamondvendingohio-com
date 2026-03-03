@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – Diamond Vending Ohio</title>
+  <meta name="description" content="Contact Diamond Vending Ohio to get a free quote for vending machines, ATMs, or mini claw machines at your Cleveland Ohio location.">
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
+  <link rel="apple-touch-icon" href="img/favicon-192.png">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue: #2366f5;
+      --blue-dark: #1a4fc2;
+      --dark: #1a202c;
+      --gray: #4a5568;
+      --light: #f7fafc;
+      --white: #ffffff;
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: var(--dark); line-height: 1.6; background: var(--light); }
+    a { color: var(--blue); text-decoration: none; }
+
+    /* NAV */
+    nav {
+      background: var(--dark);
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-brand { display: flex; align-items: center; gap: 0.75rem; color: var(--white); font-weight: 700; font-size: 1.1rem; }
+    .nav-brand img { width: 40px; height: 40px; border-radius: 6px; }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { color: rgba(255,255,255,0.85); font-size: 0.95rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links .btn-nav {
+      background: var(--blue);
+      color: var(--white);
+      padding: 0.5rem 1.25rem;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    /* PAGE HEADER */
+    .page-header {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 3.5rem 1.5rem;
+    }
+    .page-header h1 { font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 800; margin-bottom: 0.5rem; }
+    .page-header p { opacity: 0.9; font-size: 1.1rem; }
+
+    /* CONTACT LAYOUT */
+    .contact-wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    @media (max-width: 700px) {
+      .contact-wrap { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    /* INFO SIDE */
+    .contact-info h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--dark); }
+    .info-item { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.5rem; }
+    .info-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .info-item h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gray); font-weight: 600; margin-bottom: 0.2rem; }
+    .info-item a, .info-item p { color: var(--dark); font-weight: 500; font-size: 1rem; }
+    .info-item a:hover { color: var(--blue); }
+
+    .hours-grid { display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 1rem; font-size: 0.95rem; margin-top: 0.5rem; }
+    .hours-grid .day { color: var(--gray); }
+    .hours-grid .time { font-weight: 500; }
+
+    /* FORM */
+    .contact-form {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .contact-form h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1.5rem; }
+    .form-group { margin-bottom: 1.25rem; }
+    label { display: block; font-size: 0.875rem; font-weight: 600; color: var(--gray); margin-bottom: 0.4rem; }
+    input, textarea, select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+      color: var(--dark);
+      background: var(--white);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    input:focus, textarea:focus, select:focus { border-color: var(--blue); }
+    textarea { resize: vertical; min-height: 130px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+    .btn-submit {
+      width: 100%;
+      background: var(--blue);
+      color: var(--white);
+      border: none;
+      padding: 0.9rem;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      margin-top: 0.5rem;
+    }
+    .btn-submit:hover { background: var(--blue-dark); transform: translateY(-1px); }
+    .form-note { font-size: 0.8rem; color: var(--gray); text-align: center; margin-top: 0.75rem; }
+
+    /* SUCCESS */
+    .success-msg {
+      display: none;
+      background: #f0fdf4;
+      border: 1.5px solid #86efac;
+      border-radius: 8px;
+      padding: 1.25rem;
+      text-align: center;
+      color: #166534;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.6);
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.9rem;
+    }
+    footer a { color: rgba(255,255,255,0.7); }
+    footer a:hover { color: var(--white); }
+
+    @media (max-width: 640px) {
+      .nav-links a:not(.btn-nav) { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-brand">
+    <img src="img/logo.png" alt="Diamond Vending Ohio">
+    Diamond Vending Ohio
+  </a>
+  <div class="nav-links">
+    <a href="/#services">Services</a>
+    <a href="contact.html" class="btn-nav">Get a Quote</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>Contact Us</h1>
+  <p>Get a free quote for your location — we'll get back to you fast.</p>
+</div>
+
+<div class="contact-wrap">
+
+  <!-- INFO -->
+  <div class="contact-info">
+    <h2>Get In Touch</h2>
+
+    <div class="info-item">
+      <div class="info-icon">📞</div>
+      <div>
+        <h3>Phone</h3>
+        <a href="tel:4405031822">440-503-1822</a>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <div class="info-icon">✉️</div>
+      <div>
+        <h3>Email</h3>
+        <a href="mailto:diamondvendingohio@gmail.com">diamondvendingohio@gmail.com</a>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <div class="info-icon">📍</div>
+      <div>
+        <h3>Service Area</h3>
+        <p>Cleveland &amp; Northeast Ohio</p>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <div class="info-icon">🕐</div>
+      <div>
+        <h3>Hours</h3>
+        <div class="hours-grid">
+          <span class="day">Mon – Fri</span><span class="time">8:00 AM – 6:00 PM</span>
+          <span class="day">Saturday</span><span class="time">9:00 AM – 4:00 PM</span>
+          <span class="day">Sunday</span><span class="time">Closed</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <div class="contact-form">
+    <h2>Request a Free Quote</h2>
+    <form id="contactForm" action="https://formspree.io/f/diamondvendingohio@gmail.com" method="POST">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Your Name *</label>
+          <input type="text" id="name" name="name" placeholder="John Smith" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="440-555-0000">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="service">What are you interested in?</label>
+        <select id="service" name="service">
+          <option value="">Select a service...</option>
+          <option>Vending Machine (Snacks &amp; Beverages)</option>
+          <option>ATM Placement</option>
+          <option>Mini Claw Machine</option>
+          <option>Selling a Used Vending Machine</option>
+          <option>Machine Removal / Installation</option>
+          <option>Multiple Services</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="location">Business / Location Name</label>
+        <input type="text" id="location" name="location" placeholder="ABC Manufacturing, Main St Diner...">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Additional Details</label>
+        <textarea id="message" name="message" placeholder="Tell us about your location, number of employees, foot traffic, etc."></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Send My Request →</button>
+      <p class="form-note">We typically respond within 1 business day.</p>
+    </form>
+    <div class="success-msg" id="successMsg">
+      ✅ Message sent! We'll be in touch soon.
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2024 Diamond Vending Ohio &nbsp;·&nbsp; Cleveland, Ohio &nbsp;·&nbsp; <a href="tel:4405031822">440-503-1822</a> &nbsp;·&nbsp; <a href="/">Home</a></p>
+</footer>
+
+<script>
+  // Show success message after form submit (Formspree redirects, but handle AJAX too)
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('.btn-submit');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        document.getElementById('successMsg').style.display = 'block';
+      } else {
+        btn.textContent = 'Send My Request →';
+        btn.disabled = false;
+        alert('Something went wrong. Please call us at 440-503-1822.');
+      }
+    } catch {
+      btn.textContent = 'Send My Request →';
+      btn.disabled = false;
+      alert('Something went wrong. Please call us at 440-503-1822.');
+    }
+  });
+</script>
+
+</body>
+</html>
